@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AlertsPopUpHandling {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/home/mea/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -24,6 +24,8 @@ public class AlertsPopUpHandling {
         System.out.println(alert.getText()); //prints the alert message
 
         alert.accept(); //clicks ok button
+
+        Thread.sleep(50000);
 
         driver.findElement(By.xpath("//button[@class='btn btn-default btn-lg'][contains(text(),'Click me!')]")).click();
 

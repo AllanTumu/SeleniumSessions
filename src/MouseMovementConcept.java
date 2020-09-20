@@ -20,7 +20,7 @@ public class MouseMovementConcept {
 
         driver.findElement(By.xpath("//a[contains(text(),'Visa Services')]")).click();
 
-        driver.quit();
+        //driver.quit();
 
     }
 }
